@@ -14,8 +14,6 @@ import numpy  # Make sure NumPy is loaded before it is used in the callback
 assert numpy  # avoid "imported but unused" message (W0611)
 
 samplerate = 44100  # Sample rate
-seconds = 60  # Duration of recording
-
 q = queue.Queue()
 
 def callback(indata, frames, time, status):
