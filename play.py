@@ -19,6 +19,8 @@ file_path = filedialog.askopenfilename(
 import sounddevice as sd
 import soundfile as sf
 
+sd.default.device = 'Speakers (NVIDIA Broadcast), MME'
+
 # Extract data and sampling rate from file
 data, fs = sf.read(file_path, dtype='float32')  
 sd.play(data, fs)
